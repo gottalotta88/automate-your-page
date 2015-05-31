@@ -1,0 +1,90 @@
+L*Lesson 1: Intro to serious programming
+C*General info
+B*Python is a language that is read by an interpreter and then translated into instructions that a machine can understand
+Programming languages are better than natural languages because they are less ambiguous and more concise
+C*Backus-Naur form; John Backus; inventor of Fortran in the 1950s
+B*Grammar rules for a programming language
+Nonterminals are terms that can be further broken down or replaced
+Once get to a terminal, which is the most specific form, no longer need further clarification
+Replacement grammars allow you to figure out which sentences are possible based on the rules
+Expression in python: expression operator expression
+L*Lesson 2: Variables and strings
+C*Variables
+B*Assignment statement assigns value to a variable
+Can compute by connecting assigned variables by operators
+The equals sign in python means assignment, not equals
+C*Strings
+B*Can use double or single quotes
+Convention to not capitalize names of variables in python
+Concatenation refers to adding two strings together
+Can also use multiplication operator to repeat a string
+C*Indexing strings
+B*Indexing refers to retrieving a value of a particular character in a string
+s[0] gives first letter of string named s; ditto for subsequent numbers; if s[3] and string only 3 characters, will return error; s[0] can cause error for empty string; subsequence operator does not return error for this issue
+s[-1] gives last letter
+Can also do "example"[0] which will result in e, where string is defined in the expression
+Subsequences can be extracted with expression like s[0:2] which will represent first 2 letters; starts at the first number, ends before the second number
+Can also do s[:2] which will give first 2 characters; key is doesn"t include the number you border with; can do s[2:] which goes to end
+Just like with lists, can use in/not to index and return boolean value for whether substring is within a string; print "hello" in y returns True is string y contains hello
+C*Finding strings in strings
+B*s.find(string); passing a string to this function, will return position of that string; if not found, will return -1
+Can pass in an extra parameter; s.string("s", 1); this will search starting at the number you specified
+Additional info
+Multiline strings: can make these with triple quotes
+Abstract thinking involves producing solutions that apply to general situations more so than specific ones
+Problem done to find second instance of zip in a string of text or return -1 if not present at least twice; two solutions
+L*Lesson 3: Input->Function->Output
+C*Function basics
+B*Functions allow you to abstract procedures into shorter commands that can be easily expressed	
+Define a function name followed by its parameters which are the values being passed to it
+Calling a function refers to using it
+C*Additional info
+B*Procedure composition refers to combining functions where output of one function becomes input of next; square(sum(x,y))
+Use triple quote to move output to multiple lines into whatever natural format of indents you want	
+Once you hit a return statement in a function, that will end it
+L*Lesson 4: Control flow and loops
+C*Making decisions involves using operators and producing boolean (true or false) values
+C*If
+B*If else statements allow execution of first command if boolean value is true, execute else command if boolean is false
+Can have a return command for each condition
+Can nest an if within an if
+Or operator can give multiple criteria for a conditional;if first operand is true, the second doesn"t need to get evaluated
+With the operations learned thus far, able to write every possible computer program
+Biggest(bigger(a,b), c) example; procedural thinking; nesting functions within functions or passing values from one to another
+C*Loops
+B*While loop continues executing block as long as test expression is true
+If write so that condition is never satisfied, called an infinite loop
+Break; can insert as command within and if statement to exit the loop
+L*Lesson 5: Debugging
+C*Strategies
+B*Examine error messages
+When trying to fix a piece of code, consider commenting out original code and then copying it down to work on the copied version instead of original
+Add print statements to get intermediate results
+Keep and compare old versions
+L*Lesson 6: Structured Data: Lists and For Loops
+C*Lists
+B*Lists contain multiple ordered elements which can include numbers, strings, or other lists
+When assigning list, enclose in brackets; tuples are enclosed in parentheses
+Can have nested lists where every element in a list is another list; this is great for storing items when have items that have attributes like name and birthdate or country and capital
+Mutation refers to the ability to change individual elements within lists by assigning new values to them
+Strings are not mutable whereas lists are; numbers are also not mutable since they are not objects
+If assign a list p to a different variable q, now both variables refer to the same list object; if you mutate p, q will experience that mutation since both pointing to the same object
+Having two different ways to refer to the same object is called aliasing
+C*List operations for a list p
+B*Append: <list>.append(<string>) will add string to the list; can also append with a new list; this appended element will then refer to the list and respond to any changes in this list object to which it refers
+Addition: <list> + <list>; key distinction between append and add is that former adds new item as a list item
+Length: len(<list>) gives length of the list; this also works for strings to get number of characters
+Index: <list>.index(<value>) will return location; if not present, get error; you wrote a longer way to do this in the exercise;
+In/Not in: <value> in <list>; output boolean answer to whether true or false; can also do <value> not in <list> to give the opposite boolean value; when using in if statement, don"t need any additional operators since returns boolean; "if x in p"
+C*For loops
+B*Can theoretically use a while loop with a i < len(p) criteria to walk down a list but for is available to do this with less code
+"For x in y" has the function walk along the list y and then you can do whatever you want to each element x; if there are nested lists, can manipulate them within function using list operations
+L*Lesson 7: How to solve problems
+C*Strategies
+B*First step is to understand the problem: problem is defined by inputs and outputs; how do you get from the input to the output?
+Next work out some examples to understand the relationship
+Consider systematically how a human solves the problem
+Simple mechanical solution; don"t optimize prematurely
+Emphasizes writing small bits of code and methodically testing each small bit along the way so you make systematic progress; avoids major bugs at the end
+Lesson mentions assert function to detect conditions you deem unacceptable and then display an error; also great for making a test function
+

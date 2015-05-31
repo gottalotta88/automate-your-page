@@ -1,0 +1,482 @@
+
+<!-- New headings; through stage 2-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Notes</title>
+    <link rel="stylesheet" type="text/css" href="stage2.css">
+</head>
+<body>
+  <img class="image1" src="images/everest.png" alt="oops!">
+  <div class="stageheader">Stage 1: Make Your Webpage</div>
+  <h1>Lesson 1: Basics of web and HTML</h1>
+  <div class="subtopic">
+    <div class="header2">Big ideas</div>
+    <div class="text">
+      <p>
+        HTML: Hypertext markup language
+      </p>
+      <p>
+        Web invented in the 1990s; all pages link together
+      </p>
+      <p>
+        Browser makes requests to the internet via HTTP to servers, which respond with files that the browser displays
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Components of HTML</div>
+    <div class="text">
+      <p>
+        <b>Text content</b>: what you see<br>
+      </p>
+      <p>
+        <b>Markup</b>: what it looks like<br>
+      </p>
+      <p>
+        References to other documents: images and videos
+      <p>
+        Test out code at <a href ="www.udacity.com/html_playground"> link </a>
+      </P>
+      <p>
+        <b>Opening tags</b> and <b>closing tags</b>; both tags plus contents within is called an element
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Notes on elements</div>
+    <div class="text">
+      <p>
+        B tag is for bold
+      </p>
+      <p>
+        em tag is for italics
+      </p>  
+      <p>  
+        If you don't close tag; everything after is bolded/italicized
+      </p>  
+      <p>
+        a is for anchor
+         <ul>
+          <li>Used for making links</li>
+          <li>Followed by an attribute name, value, and then contents
+          </ul>
+        img is for image
+          <ul>
+          <li>Src and alt are attributes; alt is what to display if broken request
+          <li>Img doesn't have any content, so no closing tag; this is called a void tag, a tag that has no content</li>
+          </ul>
+        Lines
+          <ul>
+          <li>br is a line break to make text go onto next line; also a void tag</li>
+          <li>p is for paragraph; need closing tag after content</li>
+          <li>Br just puts to next line whereas p tag makes an invisible box; br is an inline element while p is a block element; latter creates blocks on the screen</li>
+          <li>Spaces and returns will not be registered</li>
+          </ul>
+        Span and div
+          <ul>
+          <li>Span can be used to give CSS styles to contents; inline element</li>
+          <li>Div does the same but as a block element</li>
+          </ul>
+        Thus basic HTML vocab consists of <b>tags</b>, <b>elements</b>, and <b>attributes</b>
+    </div>
+  </div>  
+  <h1>Lesson 2: Structure of web pages</h1>
+  <div class="subtopic">
+    <div class="header2">Tree-like structure of pages</div>
+    <div class="text">
+      <p>
+        Developer tool creates tree-like structure with triangles to denote elements
+      </p>
+      <p>
+        Did exercise where draw tree-like structure of simple web page; http://assignments.udacity-extras.appspot.com/courses/html-css/samples/explore.html
+      </p>
+      <p>
+        Div elements create "containers" and can have further nested containers within
+      </p>
+    </div> 
+  </div>
+  <div class="subtopic">
+    <div class="header2">Document object model (DOM)</div>
+    <div class="text">
+      <p>
+        Standard convention for representing HTML document
+      </p>
+        Can highlight the HTML code in the developer tools DOM corresponding to an object and then adjust the style details for it
+        <ul>
+          <li>http://assignments.udacity-extras.appspot.com/courses/html-css/samples/shapes.html</li>
+          <li>Unchecking border radius box turns circles into squares; all elements of a document are actually boxes</li>
+          <li>When given a design mock, you "boxify" it into boxed components</li>
+          <li>Can split up a box with nested divs</li>
+        </ul>
+    </div>
+  </div>  
+  <div class="subtopic">
+    <div class="header2">CSS</div>
+    <div class="text">
+      <p>
+        Allows style and appearance formatting; for example can make all h1 elements of the class "x" look the same way
+      </p>
+      <p>
+        One key benefit of using CSS for styling is <b>repetition</b>; allows you to write far less styling code which can be abstracted as classes and summoned with short snippets of code
+      </p>
+      <p>
+        Repetition also makes a page run faster
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 3: Adding CSS Style and HTML Structure</h1>
+  <div class="subtopic">
+    <div class="header2">Basic terms</div>
+    <div class="text">
+      <p>
+        CSS: Cascading style sheets
+      </p>
+      <p>
+        <b>Inheritance</b>: descended elements nested within an HTML element will inherit CSS properties of the larger element, unless the sub-element has its own specified CSS style
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Basic structure</div>
+    <div class="text">
+      <p>For all h1: h1 {color:red;}</p>
+      <p>For specific CSS classes: .classname {color:red;}</p>
+      <p>h1 is a <b>selector</b>; rule can be applied to all h1; can also apply rule to all div</p>
+      <p>color:red is a <b>declaration</b></p>
+      <p>color is a <b>property</b>; red is the value of that property</p>
+      <p>Mozilla has good exhaustive reference for CSS properties; e.g. font-weight specifies boldness</p>
+      <p>Outline CSS property can be used to better see block structure of your page</p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Clarifications</div>
+    <div class="text">
+        Span vs. Div
+        <ul>
+          <li>Div is block element; good for grouping and organization</li>
+          <li>Span class can be used as inline element; example in class code of using it for span class=italic and then defining italic in CSS</li>
+        </ul>
+        Id vs class
+        <ul>
+          <li>Id uniquely identifies an element and don't repeat, as opposed to class which can be repeated</li>
+          <li>Useful if want to use <b>anchor element to link to a particular spot</b>; id="welcome"; a href="#welcome"</li>
+          <li>Class better for grouping similarly</li>
+          <li>Can use both id and class in a div</li>
+        </ul>
+    </div>
+  </div>
+  <div class ="subtopic">
+    <div class ="header2">Box model</div>
+    <div class="text">
+      <p>
+        All HTML elements are boxes
+      </p>
+        Components
+        <ul>
+          <li>Content -  text and images</li>
+          <li>Padding - transparent area</li>
+          <li>Border - border around padding and content</li>
+          <li>Margin; transparent; basically whitespace between boxes</li>
+        </ul>
+      <p>
+        Width of content as defined won't be total width; total width of box involves adding content, padding, and border
+      </p>
+      <p>
+        Not intuitive to have defined width not reflect what is actually rendered; thus <b>box-sizing</b> property with <b>border-box</b> value will make defined width the width of the combo of border, padding, and content which is more intuitive; margin not included in size
+      <p>
+        Can set width as percentage of window so that it adjusts to window width
+      </p>
+      <p>
+        Max-width attribute such that will adjust but not above a max width; overrides width property
+      </p>
+    </div>
+  </div>
+ <div class="stageheader">Stage 2: Automate Your Webpage</div>
+ <h1>Lesson 1: Intro to serious programming</h1>
+  <div class="subtopic">
+    <div class="header2">General info</div>
+    <div class = "text">
+      <p>
+        Python is a language that is read by an interpreter and then translated into instructions that a machine can understand
+      </p>
+      <p>
+        Programming languages are better than natural languages because they are less ambiguous and more concise
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Backus-Naur form; John Backus; inventor of Fortran in the 1950s</div>
+    <div class = "text">
+      <p>
+        Grammar rules for a programming language
+      </p>
+      <p>
+        Nonterminals are terms that can be further broken down or replaced
+      </p>
+      <p>
+        Once get to a terminal, which is the most specific form, no longer need further clarification
+      </p>
+      <p>
+        Replacement grammars allow you to figure out which sentences are possible based on the rules
+      </p>
+      <p>
+        Expression in python: expression operator expression
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 2: Variables and strings</h1>
+  <div class="subtopic">
+    <div class="header2">Variables</div>
+    <div class = "text">
+      <p>
+        Assignment statement assigns value to a variable
+      </p>
+      <p>
+        Can compute by connecting assigned variables by operators
+      </p>
+      <p>
+        The equals sign in python means assignment, not equals
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Strings</div>
+    <div class = "text">
+      <p>
+        Can use double or single quotes
+      </p>
+      <p>
+        Convention to not capitalize names of variables in python
+      </p>
+      <p>
+        Concatenation refers to adding two strings together
+      </p>
+      <p>
+        Can also use multiplication operator to repeat a string
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Indexing strings</div>
+    <div class = "text">
+      <p>
+        Indexing refers to retrieving a value of a particular character in a string
+      </p>
+      <p>
+        s[0] gives first letter of string named s; ditto for subsequent numbers; if s[3] and string only 3 characters, will return error; s[0] can cause error for empty string; subsequence operator does not return error for this issue
+      </p>
+      <p>
+        s[-1] gives last letter
+      </p>
+      <p>
+        Can also do "example"[0] which will result in e, where string is defined in the expression
+      </p>
+      <p>
+        Subsequences can be extracted with expression like s[0:2] which will represent first 2 letters; starts at the first number, ends before the second number
+      </p>
+      <p>
+        Can also do s[:2] which will give first 2 characters; key is doesn"t include the number you border with; can do s[2:] which goes to end
+      </p>
+      <p>
+        Just like with lists, can use in/not to index and return boolean value for whether substring is within a string; print "hello" in y returns True is string y contains hello
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Finding strings in strings</div>
+    <div class = "text">
+      <p>
+        s.find(string); passing a string to this function, will return position of that string; if not found, will return -1
+      </p>
+      <p>
+        Can pass in an extra parameter; s.string("s", 1); this will search starting at the number you specified
+      </p>
+      <p>
+        Additional info
+      </p>
+      <p>
+        Multiline strings: can make these with triple quotes
+      </p>
+      <p>
+        Abstract thinking involves producing solutions that apply to general situations more so than specific ones
+      </p>
+      <p>
+        Problem done to find second instance of zip in a string of text or return -1 if not present at least twice; two solutions
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 3: Input->Function->Output</h1>
+  <div class="subtopic">
+    <div class="header2">Function basics</div>
+    <div class = "text">
+      <p>
+        Functions allow you to abstract procedures into shorter commands that can be easily expressed 
+      </p>
+      <p>
+        Define a function name followed by its parameters which are the values being passed to it
+      </p>
+      <p>
+        Calling a function refers to using it
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Additional info</div>
+    <div class = "text">
+      <p>
+        Procedure composition refers to combining functions where output of one function becomes input of next; square(sum(x,y))
+      </p>
+      <p>
+        Use triple quote to move output to multiple lines into whatever natural format of indents you want  
+      </p>
+      <p>
+        Once you hit a return statement in a function, that will end it
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 4: Control flow and loops</h1>
+  <div class="subtopic">
+    <div class="header2">Making decisions involves using operators and producing boolean (true or false) values</div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">If</div>
+    <div class = "text">
+      <p>
+        If else statements allow execution of first command if boolean value is true, execute else command if boolean is false
+      </p>
+      <p>
+        Can have a return command for each condition
+      </p>
+      <p>
+        Can nest an if within an if
+      </p>
+      <p>
+        Or operator can give multiple criteria for a conditional;if first operand is true, the second doesn"t need to get evaluated
+      </p>
+      <p>
+        With the operations learned thus far, able to write every possible computer program
+      </p>
+      <p>
+        Biggest(bigger(a,b), c) example; procedural thinking; nesting functions within functions or passing values from one to another
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Loops</div>
+    <div class = "text">
+      <p>
+        While loop continues executing block as long as test expression is true
+      </p>
+      <p>
+        If write so that condition is never satisfied, called an infinite loop
+      </p>
+      <p>
+        Break; can insert as command within and if statement to exit the loop
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 5: Debugging</h1>
+  <div class="subtopic">
+    <div class="header2">Strategies</div>
+    <div class = "text">
+      <p>
+        Examine error messages
+      </p>
+      <p>
+        When trying to fix a piece of code, consider commenting out original code and then copying it down to work on the copied version instead of original
+      </p>
+      <p>
+        Add print statements to get intermediate results
+      </p>
+      <p>
+        Keep and compare old versions
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 6: Structured Data: Lists and For Loops</h1>
+  <div class="subtopic">
+    <div class="header2">Lists</div>
+    <div class = "text">
+      <p>
+        Lists contain multiple ordered elements which can include numbers, strings, or other lists
+      </p>
+      <p>
+        When assigning list, enclose in brackets; tuples are enclosed in parentheses
+      </p>
+      <p>
+        Can have nested lists where every element in a list is another list; this is great for storing items when have items that have attributes like name and birthdate or country and capital
+      </p>
+      <p>
+        Mutation refers to the ability to change individual elements within lists by assigning new values to them
+      </p>
+      <p>
+        Strings are not mutable whereas lists are; numbers are also not mutable since they are not objects
+      </p>
+      <p>
+        If assign a list p to a different variable q, now both variables refer to the same list object; if you mutate p, q will experience that mutation since both pointing to the same object
+      </p>
+      <p>
+        Having two different ways to refer to the same object is called aliasing
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">List operations for a list p</div>
+    <div class = "text">
+      <p>
+        Append: <list>.append(<string>) will add string to the list; can also append with a new list; this appended element will then refer to the list and respond to any changes in this list object to which it refers
+      </p>
+      <p>
+        Addition: <list> + <list>; key distinction between append and add is that former adds new item as a list item
+      </p>
+      <p>
+        Length: len(<list>) gives length of the list; this also works for strings to get number of characters
+      </p>
+      <p>
+        Index: <list>.index(<value>) will return location; if not present, get error; you wrote a longer way to do this in the exercise;
+      </p>
+      <p>
+        In/Not in: <value> in <list>; output boolean answer to whether true or false; can also do <value> not in <list> to give the opposite boolean value; when using in if statement, don"t need any additional operators since returns boolean; "if x in p"
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">For loops</div>
+    <div class = "text">
+      <p>
+        Can theoretically use a while loop with a i < len(p) criteria to walk down a list but for is available to do this with less code
+      </p>
+      <p>
+        "For x in y" has the function walk along the list y and then you can do whatever you want to each element x; if there are nested lists, can manipulate them within function using list operations
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 7: How to solve problems</h1>
+  <div class="subtopic">
+    <div class="header2">Strategies</div>
+    <div class = "text">
+      <p>
+        First step is to understand the problem: problem is defined by inputs and outputs; how do you get from the input to the output?
+      </p>
+      <p>
+        Next work out some examples to understand the relationship
+      </p>
+      <p>
+        Consider systematically how a human solves the problem
+      </p>
+      <p>
+        Simple mechanical solution; don"t optimize prematurely
+      </p>
+      <p>
+        Emphasizes writing small bits of code and methodically testing each small bit along the way so you make systematic progress; avoids major bugs at the end
+      </p>
+      <p>
+        Lesson mentions assert function to detect conditions you deem unacceptable and then display an error; also great for making a test function
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
